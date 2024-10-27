@@ -1,0 +1,18 @@
+<p>header works!</p>
+<input type="submit" value="executed" (click)="sayhello()">
+<div [style.backgroundColor]="kolor">
+un msg simple
+</div>
+<input type="text" [(ngModel)]="kolor">
+{{kolor|uppercase}}
+<div *ngFor="let u of users">
+{{u.name}}
+{{u.quantity}}
+{{u.price}}
+<span *ngIf="u.quantity==0">
+    <button [disabled]="true">by</button>
+</span>
+<span *ngIf="u.quantity!=0">
+    <button >by</button>
+</span>
+</div>
